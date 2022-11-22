@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, Modal} from 'react-native';
 
+//importando componente
 import Detalhes from '../Detalhes/index';
 
-export default function Filmes({ data }) {
-    const [visibleModal, setVisibleModal] = useState(false)
+export default function Filmes({ data }) { /*  recebendo os dados da api pelas props  */
+    const [visibleModal, setVisibleModal] = useState(false)  /* const para manipular quando abrir e fechar modal com boolen */
  return (
    <View style={styles.container}> 
 
@@ -24,7 +25,7 @@ export default function Filmes({ data }) {
         </View>
 
         <Modal transparent={true} animationType="slide" visible={visibleModal}>
-            <Detalhes filmes={ data } voltar={ () => setVisibleModal( false )} />
+            <Detalhes filmes={ data } voltar={ () => setVisibleModal( false )} />  {/* passando os dados da api por props para outro componente e abrindo modal  */}
         </Modal>
 
    </View>

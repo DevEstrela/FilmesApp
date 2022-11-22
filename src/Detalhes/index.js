@@ -1,7 +1,7 @@
 import React from 'react';
 import { View , Text, StyleSheet, TouchableOpacity, BackHandler} from 'react-native';
 
-export default function Detalhes(props) {
+export default function Detalhes(props) {    /* recebendo dados pela props */
  return (
    <View style={styles.container}>   
 
@@ -14,7 +14,7 @@ export default function Detalhes(props) {
         </TouchableOpacity>
       </View>
 
-
+          {/* exibindo os dados da API */}
         <Text style={styles.title} >{props.filmes.nome}</Text>
         <Text style={styles.sinopse} > Sinopse:  </Text>
         <Text style={styles.descricao} > {props.filmes.sinopse} </Text>
